@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store And Nest Craft | Handmade with Heart</title>
+<meta name="description" content="Store And Nest Craft — beautiful handmade pieces for thoughtful homes and meaningful gifts.">
+<style>
+:root{
+  --ink:#2f2924;--muted:#766b62;--cream:#fbf7f0;--paper:#fffdf9;
+  --sage:#657462;--sage-dark:#4d5b4e;--clay:#b9785e;--line:#e9dfd4;
+  --shadow:0 20px 50px rgba(54,40,30,.09);--radius:24px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit} button{font:inherit}
+.top{background:var(--sage-dark);color:#fff;text-align:center;padding:9px 15px;font-size:13px;letter-spacing:.04em}
+.nav{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(233,223,212,.8)}
+.navin{max-width:1180px;margin:auto;padding:17px 24px;display:flex;align-items:center;gap:25px}
+.logo{font-family:Georgia,serif;font-size:24px;font-weight:700;line-height:1.05;white-space:nowrap}
+.logo span{display:block;font-family:inherit;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--clay);margin-top:5px}
+.links{display:flex;gap:25px;margin-left:auto;font-size:14px}.links a:hover{color:var(--clay)}
+.cart{border:1px solid var(--line);background:var(--paper);padding:9px 14px;border-radius:999px;cursor:pointer}
+.hero{max-width:1180px;margin:0 auto;padding:75px 24px 60px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.kicker{color:var(--clay);font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px}
+h1{font:700 clamp(45px,6vw,78px)/.98 Georgia,serif;margin:15px 0 22px;letter-spacing:-.035em}
+.hero p{font-size:18px;color:var(--muted);max-width:560px}
+.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 20px;border-radius:999px;border:1px solid var(--ink);transition:.2s;cursor:pointer}
+.btn.primary{background:var(--ink);color:white}.btn.primary:hover{background:var(--sage-dark)}
+.btn.light{background:var(--paper);border-color:var(--line)}.btn:hover{transform:translateY(-2px)}
+.heroart{min-height:500px;border-radius:40px;background:
+ radial-gradient(circle at 68% 22%,#d6c1a4 0 11%,transparent 11.5%),
+ radial-gradient(circle at 30% 35%,#9b8066 0 14%,transparent 14.5%),
+ linear-gradient(135deg,#d9c9b5,#a9b4a5);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.heroart:before{content:"";position:absolute;width:280px;height:360px;right:11%;bottom:-60px;background:#8e624d;border-radius:48% 48% 22% 22%;transform:rotate(8deg)}
+.heroart:after{content:"HANDMADE";position:absolute;left:28px;bottom:28px;color:#fff;font-size:12px;letter-spacing:.35em}
+.section{max-width:1180px;margin:auto;padding:75px 24px}.head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
+h2{font:700 42px/1.1 Georgia,serif;margin:5px 0}.head p{color:var(--muted);max-width:500px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(54,40,30,.04);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.pic{height:235px;display:grid;place-items:center;font-size:60px}
+.p1{background:#e6d4c3}.p2{background:#d1dbd0}.p3{background:#e4d6a9}.p4{background:#d9c0b8}
+.info{padding:17px}.info h3{margin:0 0 4px;font-family:Georgia,serif;font-size:20px}.price{font-weight:800;color:var(--sage-dark)}
+.add{width:100%;margin-top:12px;border:0;background:var(--ink);color:#fff;padding:10px;border-radius:12px;cursor:pointer}.add:hover{background:var(--sage-dark)}
+.band{background:var(--sage);color:#fff}.bandin{max-width:1180px;margin:auto;padding:58px 24px;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.band h2{font-size:44px}.band p{color:#edf0ea}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+.aboutbox{min-height:360px;border-radius:34px;background:linear-gradient(145deg,#c5b19a,#738072);display:grid;place-items:center;color:#fff;font:italic 34px Georgia}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}.feature{background:var(--paper);padding:22px;border:1px solid var(--line);border-radius:18px}.feature b{display:block;margin-bottom:5px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contactbox{background:var(--paper);border:1px solid var(--line);padding:28px;border-radius:var(--radius)}.contactbox input,.contactbox textarea{width:100%;border:1px solid var(--line);background:#fff;padding:12px 14px;border-radius:12px;margin:6px 0 10px;font:inherit}.contactbox textarea{min-height:130px;resize:vertical}
+.footer{background:#2f2924;color:#eee}.footin{max-width:1180px;margin:auto;padding:48px 24px 25px;display:flex;justify-content:space-between;gap:30px}.footin p{color:#c9c1b9}.copy{text-align:center;border-top:1px solid #514a44;padding:18px;color:#bcb4ac;font-size:13px}
+.toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:13px 18px;border-radius:13px;box-shadow:var(--shadow);opacity:0;transform:translateY(15px);pointer-events:none;transition:.25s;z-index:50}.toast.show{opacity:1;transform:none}
+@media(max-width:850px){.links{display:none}.hero,.bandin,.about,.contact{grid-template-columns:1fr}.hero{padding-top:50px}.heroart{min-height:360px}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid,.features{grid-template-columns:1fr}.navin{padding:14px 16px}.section{padding:55px 18px}.hero{padding-left:18px;padding-right:18px}.heroart{min-height:300px}h2,.band h2{font-size:35px}.footin{display:block}}
+</style>
+</head>
+<body>
+<div class="top">Handmade pieces • Thoughtful gifts • Made with love</div>
+
+<header class="nav">
+  <div class="navin">
+    <a class="logo" href="#home">Store And Nest Craft<span>Handmade • Home • Heart</span></a>
+    <nav class="links">
+      <a href="#shop">Shop</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="cart" onclick="showCart()">🛒 Cart (<span id="count">0</span>)</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div>
+    <div class="kicker">Made for your nest</div>
+    <h1>Little things that make a home feel yours.</h1>
+    <p>Discover charming handmade crafts, warm home accents and thoughtful gifts from <b>Store And Nest Craft</b>.</p>
+    <div class="actions"><a class="btn primary" href="#shop">Explore the collection</a><a class="btn light" href="#about">Our story</a></div>
+  </div>
+  <div class="heroart" aria-label="Decorative handmade craft illustration"></div>
+</section>
+
+<section class="section" id="shop">
+  <div class="head"><div><div class="kicker">The collection</div><h2>Made to be loved</h2></div><p>Replace these sample products with your own crafts, prices and photos.</p></div>
+  <div class="grid">
+    <article class="card"><div class="pic p1">🧺</div><div class="info"><h3>Woven Nest Basket</h3><div class="price">Rs. 2,450</div><button class="add" onclick="add('Woven Nest Basket',2450)">Add to cart</button></div></article>
+    <article class="card"><div class="pic p2">🕯️</div><div class="info"><h3>Hand-Poured Candle</h3><div class="price">Rs. 1,350</div><button class="add" onclick="add('Hand-Poured Candle',1350)">Add to cart</button></div></article>
+    <article class="card"><div class="pic p3">🌿</div><div class="info"><h3>Botanical Wall Art</h3><div class="price">Rs. 1,950</div><button class="add" onclick="add('Botanical Wall Art',1950)">Add to cart</button></div></article>
+    <article class="card"><div class="pic p4">🏺</div><div class="info"><h3>Clay Keepsake Pot</h3><div class="price">Rs. 1,750</div><button class="add" onclick="add('Clay Keepsake Pot',1750)">Add to cart</button></div></article>
+  </div>
+</section>
+
+<section class="band">
+ <div class="bandin"><div><div class="kicker" style="color:#e9c1aa">A little handmade magic</div><h2>Crafted slowly. Chosen thoughtfully.</h2></div><p>Every piece is designed to bring texture, warmth and personality into your everyday spaces. Perfect for your own nest or as a meaningful gift.</p></div>
+</section>
+
+<section class="section" id="about">
+ <div class="about">
+   <div class="aboutbox">made by hand<br>for your home</div>
+   <div><div class="kicker">Our story</div><h2>Small details. Big feeling.</h2><p>Store And Nest Craft is a cozy handmade brand built around the idea that the objects around us should feel personal. From useful little baskets to beautiful décor, our collection celebrates simple materials and thoughtful craftsmanship.</p>
+   <div class="features"><div class="feature"><b>🤍 Handmade</b><span>Thoughtfully crafted pieces.</span></div><div class="feature"><b>🌿 Warm & Natural</b><span>Earthy, timeless aesthetics.</span></div><div class="feature"><b>🎁 Gift Ready</b><span>Made for special moments.</span></div></div></div>
+ </div>
+</section>
+
+<section class="section" id="gallery">
+ <div class="head"><div><div class="kicker">Inspiration</div><h2>Gallery</h2></div><p>A simple visual section for your real product photography.</p></div>
+ <div class="grid">
+   <div class="card"><div class="pic p2">🪴</div><div class="info"><h3>Cozy corners</h3></div></div>
+   <div class="card"><div class="pic p1">🧶</div><div class="info"><h3>Handmade textures</h3></div></div>
+   <div class="card"><div class="pic p4">🎀</div><div class="info"><h3>Gift moments</h3></div></div>
+   <div class="card"><div class="pic p3">🧡</div><div class="info"><h3>Warm details</h3></div></div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="head"><div><div class="kicker">Say hello</div><h2>Let's create a cozy nest.</h2></div></div>
+ <div class="contact">
+  <div class="contactbox"><h3>Store And Nest Craft</h3><p>For orders, custom pieces and collaborations:</p><p>📱 WhatsApp: <b>+92 300 0000000</b><br>✉️ Email: <b>hello@storeandnestcraft.com</b><br>📍 Pakistan</p><p style="color:var(--muted)">Replace the contact details above with your real business information.</p></div>
+  <form class="contactbox" onsubmit="event.preventDefault(); alert('Thanks! Your message form is ready to connect to WhatsApp, email, or a backend.');"><label>Name</label><input required placeholder="Your name"><label>Email</label><input type="email" required placeholder="you@example.com"><label>Message</label><textarea required placeholder="Tell us what you are looking for..."></textarea><button class="btn primary" type="submit">Send message</button></form>
+ </div>
+</section>
+</main>
+
+<footer class="footer"><div class="footin"><div><div class="logo">Store And Nest Craft<span style="color:#d7a083">HANDMADE • HOME • HEART</span></div><p>Beautiful little things for meaningful spaces.</p></div><div><p><a href="#shop">Shop</a> &nbsp;·&nbsp; <a href="#about">About</a> &nbsp;·&nbsp; <a href="#contact">Contact</a></p></div></div><div class="copy">© 2026 Store And Nest Craft. All rights reserved.</div></footer>
+<div class="toast" id="toast"></div>
+<script>
+let cart=JSON.parse(localStorage.getItem('snc-cart')||'[]');
+function render(){document.getElementById('count').textContent=cart.length}
+function add(name,price){cart.push({name,price});localStorage.setItem('snc-cart',JSON.stringify(cart));render();const t=document.getElementById('toast');t.textContent=name+' added to cart';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+function showCart(){if(!cart.length){alert('Your cart is empty.');return}let total=cart.reduce((s,x)=>s+x.price,0);let items=cart.map(x=>`• ${x.name} — Rs. ${x.price.toLocaleString()}`).join('\n');alert('Your cart:\\n\\n'+items+'\\n\\nTotal: Rs. '+total.toLocaleString()+'\\n\\nConnect this button to WhatsApp or your checkout system for real orders.')}
+render();
+</script>
+</body>
+</html>
